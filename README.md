@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
   <br>
-  <img src="https://img.shields.io/badge/OS-CachyOS-1a6bab?style=flat-square&logo=archlinux&logoColor=white" alt="CachyOS">
+  <img src="https://img.shields.io/badge/CachyOS-1a6bab?style=flat-square&logo=archlinux&logoColor=white" alt="CachyOS">
   <img src="https://img.shields.io/badge/toolchain-CMake%20%C2%B7%20Make%20%C2%B7%20Bash-4E4E4E?style=flat-square" alt="Build tools">
   <img src="https://img.shields.io/badge/editor-terminal--first-1F1F1F?style=flat-square" alt="terminal-first">
 </p>
