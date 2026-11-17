@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:CE422B,100:2b1a12&height=170&section=header&text=EgeDevCat&fontSize=62&fontColor=ffffff&fontAlignY=36&desc=Rust%20%26%20C%2B%2B%20systems%20work%20%C2%B7%20Linux%20daily%20driver%20%C2%B7%20Windows%20targets&descAlignY=58&descSize=17&animation=fadeIn" alt="EgeDevCat">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:CE422B,100:2b1a12&height=170&section=header&text=EgeDevCat&fontSize=62&fontColor=ffffff&fontAlignY=36&desc=Rust%20and%20C%2B%2B%20systems%20work%20%C2%B7%20Linux%20daily%20driver%20%C2%B7%20Windows%20targets&descAlignY=58&descSize=17&animation=fadeIn" alt="EgeDevCat">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=CE422B&center=true&vCenter=true&width=820&height=52&lines=Rust+and+C%2B%2B+systems+work.;Compilers%2C+bytecode+VMs%2C+memory+layout.;Linux+daily+driver+on+CachyOS.;Windows+desktop+too+%E2%80%94+C%23+and+WinUI." alt="typed">
 
