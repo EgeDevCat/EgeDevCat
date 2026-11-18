@@ -64,7 +64,7 @@ Go for single-binary services.
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=EgeDevCat&show_icons=true&hide_title=true&hide_border=true&theme=dark&icon_color=CE422B&include_all_commits=true&rank_icon=github" alt="stats">
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=EgeDevCat&show_icons=true&hide_title=true&hide_border=true&theme=dark&icon_color=CE422B&rank_icon=github" alt="stats">
 <img height="160" src="https://streak-stats.demolab.com?user=EgeDevCat&theme=dark&hide_border=true&border_radius=8&ring=CE422B&fire=CE422B&currStreakLabel=CE422B" alt="streak">
 
 <img height="185" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EgeDevCat&layout=donut&hide_border=true&theme=dark&langs_count=8" alt="language mix">
