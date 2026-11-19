@@ -7,9 +7,9 @@
 <img src="https://skillicons.dev/icons?i=c,cpp,py,linux,arch,cmake,bash,git,cs,java,vscode&theme=dark" alt="C, C++, Python, Linux, Arch, CMake, Bash, Git, C#, Java, VS Code">
 
 <p>
-<img src="https://img.shields.io/badge/Python%203.12-stdlib%20only-0B63CE?style=flat-square&logo=python&logoColor=white" alt="Python 3.12, stdlib only">
-<img src="https://img.shields.io/badge/bwrap-seccomp%20%2B%20cgroup-0d1117?style=flat-square&logo=linux&logoColor=00A8FF" alt="bubblewrap, seccomp, cgroup v2">
-<img src="https://img.shields.io/badge/Ed25519-signed%20oracle-00A8FF?style=flat-square" alt="Ed25519 signed oracle">
+<img src="https://img.shields.io/badge/Python%203.12-stdlib-0B63CE?style=flat-square&logo=python&logoColor=white" alt="Python 3.12, stdlib only">
+<img src="https://img.shields.io/badge/sandbox-bwrap%20%2B%20seccomp-0d1117?style=flat-square&logo=linux&logoColor=00A8FF" alt="bubblewrap, seccomp, cgroup v2">
+<img src="https://img.shields.io/badge/Ed25519-oracle-00A8FF?style=flat-square" alt="Ed25519 signed oracle">
 <img src="https://img.shields.io/badge/JSON--RPC-v1.2-1F6FEB?style=flat-square&logo=json&logoColor=white" alt="JSON-RPC v1.2">
 </p>
 
