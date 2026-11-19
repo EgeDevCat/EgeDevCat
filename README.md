@@ -1,80 +1,76 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:CE422B,100:2b1a12&height=180&section=header&text=EgeDevCat&fontSize=64&fontColor=ffffff&fontAlignY=34&desc=C%2B%2B%20%2B%20Rust%20%C2%B7%20compilers%2C%20bytecode%20VMs%2C%20Linux&descAlignY=58&descSize=18&animation=fadeIn" alt="EgeDevCat">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/EgeDevCat/parametral-os/master/assets/parametral-mark-256.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/EgeDevCat/parametral-os/master/assets/parametral-mark-light.svg">
+  <img src="https://raw.githubusercontent.com/EgeDevCat/parametral-os/master/assets/parametral-mark-light.svg" width="150" alt="Parametral OS">
+</picture>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=CE422B&center=true&vCenter=true&width=760&height=50&lines=C%2B%2B+where+the+metal+shows.;Rust+where+the+compiler+carries+it.;Lexers%2C+type+checkers%2C+bytecode+VMs.;CachyOS+%E2%80%94+terminal+first." alt="typed">
+<h1>EgeDevCat</h1>
 
-<img src="https://skillicons.dev/icons?i=cpp,rust,linux,arch,bash,cmake,git,vscode,csharp,go,java,py" alt="C++, Rust, Linux, Arch, Bash, CMake, Git, VS Code, C#, Go, Java, Python">
+<p><b>I build the layer between an AI and a real machine.</b><br>
+Operating systems, languages, and the boring machinery that has to say no.</p>
 
 <p>
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=CE422B" alt="Rust">
-  <img src="https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white" alt="CMake">
-  <img src="https://img.shields.io/badge/CachyOS-1a6bab?style=for-the-badge&logo=archlinux&logoColor=white" alt="CachyOS">
+<code>CachyOS</code> · <code>Python 3.12 · stdlib only</code> · <code>C++20</code> · <code>bubblewrap + seccomp</code> · <code>Ed25519</code> · <code>JSON-RPC</code>
 </p>
 
 </div>
 
-## C++ and Rust, end to end
+## What I'm actually doing
 
-I write compilers and the machines that run what they compile. C++ is the
-engine — allocation, ABI, codegen, cache lines. Rust is where new work starts,
-because the borrow checker catches what review does not.
+Almost all of it goes into **[Parametral OS](https://github.com/EgeDevCat/parametral-os)** — an Arch + Nix system an AI is allowed to operate but never own. The interesting part was never the model. It is the component that decides whether the model gets to run `rm -rf` on your disk, and answers *no* from a place the model cannot reach.
 
-| | What it does here |
-| --- | --- |
-| **C++** | 400 KB+ of it: [ketsa](https://github.com/EgeDevCat/ketsa)'s lexer, static type checker, bytecode VM and JIT scaffold. Hand-written, CMake, no framework between the source and the metal. |
-| **Rust** | The default for anything I start now — parsers, CLI tooling, concurrency. `cargo`, `clippy -D warnings`, `rustfmt`, `rust-analyzer`; `unsafe` only where a comment earns it. |
+Everything else I build orbits that same question in a different dialect: a language where the compiler has to be right, a plugin that names the chunk that is burning your server, a file manager that does not lie about what is on disk.
 
-What that looks like as a language I own:
+## Parametral OS
 
-```ketsa
-func fibonacci(n: int): int {
-    if (n <= 1) return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
-}
+Test-first, stdlib-first, and honest about which half exists. The OS side is here; the model side lives elsewhere and reaches it only through one socket.
 
-print fibonacci(10)  // 55
+```
+hard-deny oracle  →  policy (default deny)  →  capability token  →  handler  →  audit
+deterministic         allow / approval         Ed25519 + TTL        sandbox     hash chain
+signed, read-only     no rule → deny           scope + use cap      cgroup      tamper-evident
 ```
 
-```bash
-./build.sh          # C++20, CMake, GCC or Clang
-ketsa run main.ks
-```
+| Tier | What it permits | Cost of being wrong |
+| --- | --- | --- |
+| **0** | rootless Nix profile inside a sandbox | nothing: throw the sandbox away |
+| **1** | a real system write | an approval, a snapshot, a reviewed preset — no generic exec |
+| **2** | the irreversible | no path exists. Not even a valid token can buy one |
 
-## Selected work
+| Half | Contents | Where it stands |
+| --- | --- | --- |
+| **OS** | gateway, policy engine, tokens, approvals, hash-chained audit, bwrap sandbox, `sysapply`, install kit | runs, tested, isolation proof generated |
+| **AI** | model family, agent loop, experts | separate project, one JSON-RPC contract between them |
+
+**[→ the repo](https://github.com/EgeDevCat/parametral-os)** · [API v1 contract](https://github.com/EgeDevCat/parametral-os/blob/master/docs/API-v1.md) · [architecture](https://github.com/EgeDevCat/parametral-os/blob/master/docs/ARCHITECTURE.md) · [roadmap](https://github.com/EgeDevCat/parametral-os/blob/master/docs/ROADMAP.md)
+
+## The rest of the bench
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| **[ketsa](https://github.com/EgeDevCat/ketsa)** | A general-purpose language and its runtime: parser, type checker, bytecode VM, tree-walking interpreter, JIT infrastructure, CLI and [a full language wiki](https://github.com/EgeDevCat/ketsa/tree/main/docs/wiki). | C++ · CMake |
-| **[OptiByte-DragDrop](https://github.com/EgeDevCat/OptiByte-DragDrop)** | Automation platform that ships as one Go binary — drag-and-drop wiring, no Docker, no Node, no database to babysit. | Go · TypeScript |
-| **[Blockeum](https://github.com/EgeDevCat/Blockeum)** | Visual programming IDE built on a real AST: blocks compile to source, and source decompiles back into blocks. | JavaScript |
-| **[LagTrace](https://github.com/EgeDevCat/LagTrace)** | Minecraft server diagnostics that scan loaded chunks and name the hotspots with coordinates — not just another TPS readout. | Java |
-| **[NovaExplorer](https://github.com/EgeDevCat/NovaExplorer)** | Windows file manager on WinUI 3, packaged for x64, arm64 and x86. | C# · XAML |
+| [ketsa](https://github.com/EgeDevCat/ketsa) | a general-purpose language: hand-written lexer, static type checker, bytecode VM, tree-walking interpreter, its own wiki | C++20 · CMake |
+| [LagTrace](https://github.com/EgeDevCat/LagTrace) | Minecraft server diagnostics that name the hot chunks with coordinates instead of printing another TPS number | Java |
+| [NovaExplorer](https://github.com/EgeDevCat/NovaExplorer) | Windows file manager on WinUI 3, packaged for x64 / arm64 / x86 | C# · XAML |
+| [Nexus](https://github.com/EgeDevCat/Nexus) | terminal identity and system-inspection tool, JSON-backed | C# |
 
-## Rig
+## How I work
 
-**CachyOS** (Arch-based, performance-tuned) is the daily driver: GCC/Clang,
-CMake, `cargo`, `pacman` + AUR, `systemd-boot`, ext4, `mkarchiso` for live
-images. Windows targets happen too — .NET and WinUI 3, three architectures per
-release. Everything else is the platform's choice: Java for Minecraft plugins,
-Go for single-binary services.
+- **Trust boundaries, not vibes.** If a decision can't be made by a process the model cannot write to, it isn't a security decision — it's a hope.
+- **Stdlib first.** The gateway imports nothing third-party. Fewer moving parts is not minimalism, it's something you can actually prove.
+- **Fail closed.** Oracle gone means refuse, not warn. A swallowed exception is a vulnerability with good manners.
+- **Tests that try to break it.** Sandbox escape, token scope, audit tampering, foreign uid on a socket — each one has a case that attempts it.
+- **Contract before code.** The wire format gets written and frozen first; the implementation catches up.
 
----
+## The machine
 
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=EgeDevCat&show_icons=true&hide_title=true&hide_border=true&theme=dark&icon_color=CE422B&rank_icon=github" alt="stats">
-<img height="160" src="https://streak-stats.demolab.com?user=EgeDevCat&theme=dark&hide_border=true&border_radius=8&ring=CE422B&fire=CE422B&currStreakLabel=CE422B" alt="streak">
-
-<img height="185" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EgeDevCat&layout=donut&hide_border=true&theme=dark&langs_count=8" alt="language mix">
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=EgeDevCat&bg_color=0d1117&color=CE422B&line=CE422B&point=ffffff&area=true&hide_border=true&custom_title=Contribution%20activity" alt="activity">
-
-</div>
+CachyOS (Arch-based) is the daily driver — GCC, Clang, CMake, `cargo`, `pacman` + AUR, `systemd-boot`, `mkarchiso` when a live image is needed, fish as the shell. Windows targets happen too, mostly .NET and WinUI 3. No Docker anywhere in the loop: I would rather ship one binary than a stack of manifests.
 
 ---
 
 <div align="center">
-  <sub>Issues on the repo you care about reach me faster than anything else.</sub>
+
+<sub>Issues on the repo you care about reach me faster than anything else.</sub>
+
 </div>
