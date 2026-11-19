@@ -2,12 +2,13 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:05080d,55:0a3f7d,100:0a63c0&height=200&section=header&text=EgeDevCat&fontSize=62&fontColor=ffffff&fontAlignY=31&desc=an%20AI%20may%20operate%20this%20machine%20%E2%80%94%20it%20may%20never%20own%20it&descAlignY=50&descSize=17&animation=fadeIn" alt="EgeDevCat">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2800&pause=900&color=00A8FF&center=true&vCenter=true&width=820&height=50&lines=The+OS+decides.+The+model+only+asks.;Tier+2+has+no+approval+path%2C+by+design.;Python+3.12%2C+stdlib+only%2C+fail+closed.;bubblewrap+%2B+seccomp+%2B+cgroup+v2.;CachyOS%2C+terminal+first." alt="typed">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2800&pause=900&color=00A8FF&center=true&vCenter=true&width=820&height=50&lines=The+OS+decides.+The+model+only+asks.;Tier+2+has+no+approval+path%2C+by+design.;Python+3.12%2C+stdlib+only%2C+fail+closed.;bubblewrap+%2B+seccomp+%2B+cgroup+v2.;Rust+first%2C+C%2B%2B+where+the+metal+shows." alt="typed">
 
-<img src="https://skillicons.dev/icons?i=c,cpp,py,linux,arch,cmake,bash,git,cs,java,vscode&theme=dark" alt="C, C++, Python, Linux, Arch, CMake, Bash, Git, C#, Java, VS Code">
+<img src="https://skillicons.dev/icons?i=rust,c,cpp,py,linux,arch,cmake,bash,git,cs,java,vscode&theme=dark" alt="Rust, C, C++, Python, Linux, Arch, CMake, Bash, Git, C#, Java, VS Code">
 
 <p>
 <img src="https://img.shields.io/badge/Python%203.12-stdlib-0B63CE?style=flat-square&logo=python&logoColor=white" alt="Python 3.12, stdlib only">
+<img src="https://img.shields.io/badge/Rust-favourite-000000?style=flat-square&logo=rust&logoColor=00A8FF" alt="Rust">
 <img src="https://img.shields.io/badge/sandbox-bwrap%20%2B%20seccomp-0d1117?style=flat-square&logo=linux&logoColor=00A8FF" alt="bubblewrap, seccomp, cgroup v2">
 <img src="https://img.shields.io/badge/Ed25519-oracle-00A8FF?style=flat-square" alt="Ed25519 signed oracle">
 </p>
@@ -76,6 +77,7 @@ flowchart LR
 
 ## How I work
 
+- **Rust first.** It's the language I reach for before anything else: `cargo`, `clippy -D warnings`, `rustfmt`, and `unsafe` only where a comment earns it. The compiler is the reviewer that never gets tired.
 - **Trust boundaries, not vibes.** If a decision can't be made by a process the model cannot write to, it isn't a security decision — it's a hope.
 - **Stdlib first.** The gateway imports nothing third-party. Fewer moving parts isn't minimalism, it's something you can actually prove.
 - **Fail closed.** Oracle gone means refuse, not warn. A swallowed exception is a vulnerability with good manners.
